@@ -14,8 +14,9 @@ export default createApp({
     {
       name: 'client',
       type: 'spa',
-      handler: './index.html', // Vinxi usará el HTML como entrada
+      handler: './index.html',
       target: 'browser',
+      base: '/', 
       plugins: () => [
         tsConfigPaths({
           projects: ['./tsconfig.json'],
