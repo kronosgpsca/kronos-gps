@@ -1,5 +1,6 @@
 import { createApp } from 'vinxi'
 import tsConfigPaths from 'vite-tsconfig-paths'
+import tailwindcss from '@tailwindcss/vite' // Importamos el plugin de Tailwind
 
 export default createApp({
   server: {
@@ -9,10 +10,11 @@ export default createApp({
     {
       name: 'client',
       type: 'spa',
-      handler: './index.html', // Punto de entrada
+      handler: './index.html',
       target: 'browser',
-      base: '/', // Esto es vital para el dominio .com
+      base: '/',
       plugins: () => [
+        tailwindcss(), // Activamos Tailwind aquí
         tsConfigPaths({
           projects: ['./tsconfig.json'],
         }),
