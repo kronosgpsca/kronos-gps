@@ -4,12 +4,14 @@ import { createRouter } from './router'
 
 const router = createRouter()
 
-if (typeof document !== 'undefined') {
-  const rootElement = document.getElementById('root')
-  if (rootElement) {
-    createRoot(rootElement).render(<RouterProvider router={router} />)
-  }
+// Forzamos el renderizado inmediato
+const rootElement = document.getElementById('root')
+
+if (rootElement) {
+  const root = createRoot(rootElement)
+  root.render(<RouterProvider router={router} />)
+} else {
+  console.error("No se encontró el elemento #root")
 }
 
-// Exportación vacía para que el router 'http' no falle
 export default {}
