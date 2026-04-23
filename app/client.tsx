@@ -12,4 +12,4 @@ if (typeof document !== 'undefined') {
 }
 
 // Exportación vacía para que el router 'http' no falle
-export default () => {}
+export default {}
