@@ -15,7 +15,7 @@ function Home() {
           <div className="flex items-center">
             <a href="/" title="Volver al Inicio">
               <img 
-                src="https://img.logoipsum.com/243.svg" // <-- 1. REEMPLAZA ESTA URL POR TU LOGO REAL
+                src="/Logo_Kronos.png"
                 alt="Logotipo de Kronos GPS - Rastreo Satelital en Caracas" 
                 className="h-10 w-auto md:h-12 hover:opacity-80 transition" // Controla el tamaño aquí
               />
