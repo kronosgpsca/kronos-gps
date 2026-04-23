@@ -1,15 +1,27 @@
-import { defineConfig } from '@tanstack/react-start/config'
+import { createApp } from 'vinxi'
 import tsConfigPaths from 'vite-tsconfig-paths'
 
-export default defineConfig({
+export default createApp({
   server: {
     preset: 'github-pages',
   },
-  vite: {
-    plugins: [
-      tsConfigPaths({
-        projects: ['./tsconfig.json'],
-      }),
-    ],
-  },
+  routers: [
+    {
+      name: 'public',
+      type: 'static',
+      dir: './public',
+      base: '/',
+    },
+    {
+      name: 'client',
+      type: 'spa',
+      handler: './app/client.tsx',
+      target: 'browser',
+      plugins: () => [
+        tsConfigPaths({
+          projects: ['./tsconfig.json'],
+        }),
+      ],
+    },
+  ],
 })
