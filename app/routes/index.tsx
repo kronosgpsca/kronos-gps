@@ -23,7 +23,7 @@ function Home() {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Control y Monitoreo en Tiempo Real</h1>
-          <p className="text-xl mb-8">La mejor herramienta de gestión empresarial para tu personal y flotas en Caracas.</p>
+          <p className="text-xl mb-8">La mejor herramienta de gestión para tu vehiculo o flota en Caracas.</p>
           <div className="flex justify-center space-x-4">
             <button className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-lg font-bold transition">Saber más</button>
             <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Cotizar</button>
@@ -43,12 +43,12 @@ function Home() {
           <div className="bg-white p-8 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="text-xl font-bold mb-2">Gestión de Flotas</h3>
-            <p className="text-gray-600">Optimiza tus tiempos en el tráfico de la ciudad y controla el uso de combustible.</p>
+            <p className="text-gray-600">Optimiza tus tiempos en el tráfico de la ciudad y controla las rutas de tu vehículo.</p>
           </div>
           <div className="bg-white p-8 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition">
             <div className="text-4xl mb-4">🛡️</div>
-            <h3 className="text-xl font-bold mb-2">Seguridad Horus</h3>
-            <p className="text-gray-600">Control eficiente a la fuerza de ventas y personal en campo las 24 horas.</p>
+            <h3 className="text-xl font-bold mb-2">Seguridad</h3>
+            <p className="text-gray-600">Control eficiente al personal en campo las 24 horas.</p>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">¿Quieres soluciones de rastreo?</h2>
-            <p className="text-gray-700 mb-4">Sabemos la importancia del control y rastreo satelital GPS, más aún en tiempos donde la seguridad y la eficiencia son la prioridad.</p>
+            <p className="text-gray-700 mb-4">Es importante el rastreo satelital GPS, más aún en la actualidad, donde la seguridad y la eficiencia son la prioridad.</p>
             <ul className="space-y-3">
               <li className="flex items-center">✅ Respuesta inmediata a emergencias</li>
               <li className="flex items-center">✅ Soporte técnico especializado</li>
