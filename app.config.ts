@@ -7,16 +7,11 @@ export default createApp({
   },
   routers: [
     {
-      name: 'public',
-      type: 'static',
-      dir: './public',
-    },
-    {
       name: 'client',
       type: 'spa',
-      handler: './index.html',
+      handler: './index.html', // Punto de entrada
       target: 'browser',
-      base: '/', 
+      base: '/', // Esto es vital para el dominio .com
       plugins: () => [
         tsConfigPaths({
           projects: ['./tsconfig.json'],
