@@ -14,19 +14,13 @@ export default createApp({
     {
       name: 'client',
       type: 'spa',
-      handler: './app/client.tsx',
+      handler: './index.html', // Vinxi usará el HTML como entrada
       target: 'browser',
       plugins: () => [
         tsConfigPaths({
           projects: ['./tsconfig.json'],
         }),
       ],
-    },
-    {
-      name: 'ssr',
-      type: 'http',
-      handler: './app/client.tsx', // Usamos el mismo para evitar el error de 'handler'
-      target: 'server',
-    },
+    }
   ],
 })
