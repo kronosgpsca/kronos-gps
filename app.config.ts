@@ -7,8 +7,13 @@ export default createApp({
   },
   routers: [
     {
+      name: 'public',
+      type: 'static',
+      dir: './public',
+    },
+    {
       name: 'client',
-      type: 'spa', // Esto es clave para que funcione como una aplicación sencilla
+      type: 'spa',
       handler: './app/client.tsx',
       target: 'browser',
       plugins: () => [
@@ -16,6 +21,12 @@ export default createApp({
           projects: ['./tsconfig.json'],
         }),
       ],
+    },
+    {
+      name: 'ssr',
+      type: 'http',
+      handler: './app/client.tsx', // Usamos el mismo para evitar el error de 'handler'
+      target: 'server',
     },
   ],
 })
