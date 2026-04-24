@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* 🟢 ENCABEZADO OPTIMIZADO CON LOGO 🟢 */}
-      <header className="bg-white border-b border-slate-100 p-4 sticky top-0 z-50">
+      <header className="bg-white border-b border-slate-100 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
           {/* SECCIÓN DEL LOGO (Izquierda) */}
@@ -17,7 +17,7 @@ function Home() {
               <img 
                 src="/Logo_Kronos.png"
                 alt="Logotipo de Kronos GPS - Rastreo Satelital en Caracas" 
-                className="h-18 w-auto md:h-22 hover:opacity-80 transition" // Controla el tamaño aquí
+                className="h-22 w-auto md:h-28 hover:opacity-80 transition" // Controla el tamaño aquí
               />
             </a>
           </div>
