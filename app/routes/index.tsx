@@ -39,12 +39,9 @@ function Home() {
             {/* LA FRASE SOLICITADA */}
             <div className="hidden lg:flex flex-col border-l border-slate-200 pl-4">
               <p className="text-sm md:text-base font-black text-slate-800 leading-tight">
-                CONTROLA EL TIEMPO,
+                Controlo el Tiempo, Domina tu Ruta
               </p>
-              <p className="text-sm md:text-base font-black text-blue-600 leading-tight">
-                DOMINA TU RUTA
-              </p>
-            </div>
+              </div>
           </div>
 
           {/* NAVEGACIÓN (Derecha) */}
