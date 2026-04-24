@@ -57,7 +57,7 @@ function Home() {
 
             {/* OPCIÓN 2: Acceder a Plataforma */}
             <a 
-              href="https://tu-plataforma-gps.com" 
+              href="https://www.iopgps.com/" 
               target="_blank"
               className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
             >
