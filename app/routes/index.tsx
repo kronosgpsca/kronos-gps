@@ -1,19 +1,34 @@
 import { createFileRoute } from '@tanstack/react-router'
-// 1. Importación de los iconos necesarios
-import { Facebook, Instagram, Music2, MessageCircle } from 'lucide-react'
+import { Facebook, Instagram, Music2, MessageCircle, Download, Monitor } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 export const Route = createFileRoute('/')({
   component: Home,
 })
 
 function Home() {
+  const [appLink, setAppLink] = useState('#')
+
+  // Lógica para determinar el link de descarga según el dispositivo
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    
+    if (/android/i.test(userAgent)) {
+      setAppLink('https://play.google.com/store/apps/details?id=com.ww.iopgps')
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+      setAppLink('https://apps.apple.com/bo/app/iopgps/id6446336643')
+    } else {
+      setAppLink('#') // Link para PC o navegadores genéricos
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white font-sans">
-      {/* 🟢 ENCABEZADO OPTIMIZADO CON LOGO 🟢 */}
+      {/* 🟢 ENCABEZADO ACTUALIZADO CON DESCARGA Y PLATAFORMA 🟢 */}
       <header className="bg-white border-b border-slate-100 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
-          {/* SECCIÓN DEL LOGO (Izquierda) */}
+          {/* SECCIÓN DEL LOGO */}
           <div className="flex items-center">
             <a href="/" title="Volver al Inicio">
               <img 
@@ -24,12 +39,31 @@ function Home() {
             </a>
           </div>
 
-          {/* NAVEGACIÓN (Derecha) */}
-          <nav className="flex space-x-2 md:space-x-6 items-center">
-            <a href="#" className="hidden md:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
-            <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
-            <a href="#contacto" className="text-slate-700 hover:text-blue-600 font-medium text-sm transition">
-              Cotiza Aquí
+          {/* NAVEGACIÓN ACTUALIZADA */}
+          <nav className="flex space-x-2 md:space-x-4 items-center">
+            <a href="#" className="hidden lg:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
+            <a href="#servicios" className="hidden md:block text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
+            
+            {/* OPCIÓN 1: Descarga la APP (Detecta dispositivo) */}
+            <a 
+              href={appLink}
+              target="_blank"
+              className="flex items-center gap-2 text-blue-600 hover:bg-blue-50 border border-blue-200 px-3 py-2 rounded-lg font-bold text-xs md:text-sm transition shadow-sm"
+            >
+              <Download size={16} />
+              <span className="hidden sm:inline">Descarga la APP</span>
+              <span className="sm:hidden">APP</span>
+            </a>
+
+            {/* OPCIÓN 2: Acceder a Plataforma */}
+            <a 
+              href="https://tu-plataforma-gps.com" 
+              target="_blank"
+              className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
+            >
+              <Monitor size={16} />
+              <span className="hidden sm:inline">Acceder a Plataforma</span>
+              <span className="sm:hidden">Acceder</span>
             </a>
           </nav>
         </div>
@@ -103,14 +137,13 @@ function Home() {
         </div>
       </section>
 
-      {/* 🔴 FOOTER ACTUALIZADO CON ICONOS DE REDES SOCIALES 🔴 */}
+      {/* 🔴 FOOTER ACTUALIZADO 🔴 */}
       <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4">KRONOS GPS</h3>
             <p className="text-slate-600 leading-relaxed mb-6">Líderes en logística y ubicación satelital en Venezuela con tecnología de punta.</p>
             
-            {/* ENLACES A REDES SOCIALES CON ICONOS */}
             <div className="flex flex-wrap gap-4">
               <a href="https://facebook.com/kronosGPSsatelital" target="_blank" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider shadow-sm">
                 <Facebook size={18} />
@@ -146,7 +179,7 @@ function Home() {
         </div>
       </footer>
 
-      {/* 🟢 BOTÓN FLOTANTE DE WHATSAPP CON ICONO 🟢 */}
+      {/* 🟢 BOTÓN FLOTANTE DE WHATSAPP 🟢 */}
       <a 
         href="https://wa.me/584243604526?text=Hola,%20deseo%20una%20cotización" 
         target="_blank"
