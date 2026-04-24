@@ -10,20 +10,24 @@ function Home() {
   const [appLink, setAppLink] = useState('#')
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
-    if (/android/i.test(userAgent)) {
-      setAppLink('https://play.google.com/store/apps/details?id=tu.app.id') 
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
-      setAppLink('https://apps.apple.com/app/tu-app-id') 
-    } else {
-      setAppLink('#') 
+    // Verificamos que estamos en el navegador
+    if (typeof window !== 'undefined') {
+      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+      
+      if (/android/i.test(userAgent)) {
+        setAppLink('https://play.google.com/store/apps/details?id=tu.app.id') // <-- Reemplaza con tu link real
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+        setAppLink('https://apps.apple.com/app/tu-app-id') // <-- Reemplaza con tu link real
+      } else {
+        setAppLink('https://kronosgps.com') // Link por defecto para PC
+      }
     }
   }, [])
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      {/* 🟢 CABECERA CON FONDO VERDE MANZANA CLARO 🟢 */}
-      <header className="bg-[#E6FBC9] border-b border-slate-200 p-2 sticky top-0 z-50">
+      {/* 🟢 CABECERA CON FONDO VERDE MANZANA Y BOTONES UNIFICADOS 🟢 */}
+      <header className="bg-[#D9F99D] border-b border-slate-300 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
           {/* SECCIÓN IZQUIERDA: LOGO + FRASE */}
@@ -36,24 +40,38 @@ function Home() {
               />
             </a>
             
-            <div className="hidden lg:flex flex-col border-l border-slate-300 pl-4">
-              <p className="text-sm md:text-base font-black text-slate-800 leading-tight">
-                Controla el Tiempo, Domina tu Ruta.
+            <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
+              <p className="text-sm md:text-base font-black text-slate-900 leading-tight">
+                CONTROLA EL TIEMPO,
+              </p>
+              <p className="text-sm md:text-base font-black text-blue-700 leading-tight">
+                DOMINA TU RUTA
               </p>
             </div>
           </div>
 
-          {/* NAVEGACIÓN (Derecha) */}
+          {/* NAVEGACIÓN (Derecha) - BOTONES CON MISMO FORMATO */}
           <nav className="flex space-x-2 md:space-x-4 items-center">
-            <a href="#" className="hidden xl:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
-            <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
-            <a href={appLink} target="_blank" className="flex items-center gap-2 text-blue-700 hover:bg-white/50 border border-blue-200 px-3 py-2 rounded-lg font-bold text-xs md:text-sm transition shadow-sm bg-white">
+            
+            {/* BOTÓN 1: Descarga la APP (Ahora con formato oscuro) */}
+            <a 
+              href={appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
+            >
               <Download size={16} />
               <span className="hidden sm:inline">Descarga la APP</span>
               <span className="sm:hidden">APP</span>
             </a>
 
-            <a href="https://www.iopgps.com/" target="_blank" className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md">
+            {/* BOTÓN 2: Acceder a Plataforma */}
+            <a 
+              href="https://tu-plataforma-gps.com" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
+            >
               <Monitor size={16} />
               <span className="hidden sm:inline">Plataforma</span>
               <span className="sm:hidden">Entrar</span>
@@ -89,7 +107,7 @@ function Home() {
         </div>
       </main>
 
-      {/* Resto de secciones (Servicios, Footer, etc.) */}
+      {/* Servicios */}
       <section id="servicios" className="py-24 px-6 bg-white text-center">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-extrabold text-slate-900 mb-16 tracking-tight">Nuestros Servicios Principales</h2>
@@ -102,17 +120,18 @@ function Home() {
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
               <div className="text-5xl mb-6">📊</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Gestión de Flotas</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos y controla el uso de tu vehículo.</p>
+              <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos y controla el uso de combustible.</p>
             </div>
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
               <div className="text-5xl mb-6">🛡️</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente sobre las rutas y paradas de tus unidades.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad Horus</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente a la fuerza de ventas y personal en campo.</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Footer */}
       <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
