@@ -1,4 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
+// 1. Importación de los iconos necesarios
+import { Facebook, Instagram, Music2, MessageCircle } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -101,23 +103,26 @@ function Home() {
         </div>
       </section>
 
-      {/* 🔴 FOOTER ACTUALIZADO CON REDES SOCIALES 🔴 */}
+      {/* 🔴 FOOTER ACTUALIZADO CON ICONOS DE REDES SOCIALES 🔴 */}
       <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4">KRONOS GPS</h3>
             <p className="text-slate-600 leading-relaxed mb-6">Líderes en logística y ubicación satelital en Venezuela con tecnología de punta.</p>
             
-            {/* ENLACES A REDES SOCIALES */}
-            <div className="flex space-x-5">
-              <a href="https://facebook.com/kronosGPSsatelital" target="_blank" className="text-slate-400 hover:text-blue-600 transition" title="Facebook">
-                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">Facebook</span>
+            {/* ENLACES A REDES SOCIALES CON ICONOS */}
+            <div className="flex flex-wrap gap-4">
+              <a href="https://facebook.com/kronosGPSsatelital" target="_blank" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider shadow-sm">
+                <Facebook size={18} />
+                Facebook
               </a>
-              <a href="https://instagram.com/kronosgps" target="_blank" className="text-slate-400 hover:text-pink-600 transition" title="Instagram">
-                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">Instagram</span>
+              <a href="https://instagram.com/kronosgps" target="_blank" className="flex items-center gap-2 text-slate-500 hover:text-pink-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider shadow-sm">
+                <Instagram size={18} />
+                Instagram
               </a>
-              <a href="https://tiktok.com/@kronosgps" target="_blank" className="text-slate-400 hover:text-black transition" title="TikTok">
-                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">TikTok</span>
+              <a href="https://tiktok.com/@kronosgps" target="_blank" className="flex items-center gap-2 text-slate-500 hover:text-black transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase tracking-wider shadow-sm">
+                <Music2 size={18} />
+                TikTok
               </a>
             </div>
           </div>
@@ -129,8 +134,9 @@ function Home() {
             <a 
               href="https://wa.me/584243604526?text=Hola,%20deseo%20más%20información" 
               target="_blank"
-              className="inline-block text-blue-600 font-bold mt-5 hover:underline text-lg"
+              className="flex items-center gap-2 text-blue-600 font-bold mt-5 hover:underline text-lg"
             >
+              <MessageCircle size={22} />
               Chatear por WhatsApp Directo →
             </a>
           </div>
@@ -140,12 +146,13 @@ function Home() {
         </div>
       </footer>
 
-      {/* 🟢 BOTÓN FLOTANTE DE WHATSAPP 🟢 */}
+      {/* 🟢 BOTÓN FLOTANTE DE WHATSAPP CON ICONO 🟢 */}
       <a 
         href="https://wa.me/584243604526?text=Hola,%20deseo%20una%20cotización" 
         target="_blank"
         className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-105 z-[100] font-bold flex items-center gap-2 border-2 border-white"
       >
+        <MessageCircle size={24} />
         <span>WhatsApp</span>
       </a>
     </div>
