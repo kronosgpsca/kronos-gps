@@ -15,11 +15,11 @@ function Home() {
       const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
       
       if (/android/i.test(userAgent)) {
-        setAppLink('https://play.google.com/store/apps/details?id=tu.app.id') // <-- Reemplaza con tu link real
+        setAppLink('https://play.google.com/store/apps/details?id=com.ww.iopgps') 
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
-        setAppLink('https://apps.apple.com/app/tu-app-id') // <-- Reemplaza con tu link real
+        setAppLink('https://apps.apple.com/bo/app/iopgps/id6446336643') 
       } else {
-        setAppLink('https://kronosgps.com') // Link por defecto para PC
+        setAppLink('https://kronosgps.com') 
       }
     }
   }, [])
@@ -41,13 +41,10 @@ function Home() {
             </a>
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
-              <p className="text-sm md:text-base font-black text-slate-900 leading-tight">
-                CONTROLA EL TIEMPO,
-              </p>
               <p className="text-sm md:text-base font-black text-blue-700 leading-tight">
-                DOMINA TU RUTA
+                Controlo el Tiempo, Domina tu Ruta.
               </p>
-            </div>
+             </div>
           </div>
 
           {/* NAVEGACIÓN (Derecha) - BOTONES CON MISMO FORMATO */}
