@@ -26,8 +26,8 @@ function Home() {
           <nav className="flex space-x-2 md:space-x-6 items-center">
             <a href="#" className="hidden md:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
             <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
-            <a href="#contacto" className="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-700 transition shadow-sm">
-              Cotizar Aquí
+            <a href="#contacto" className="text-slate-700 hover:text-blue-600 font-medium text-sm transition">
+            Cotiza Aquí
             </a>
           </nav>
         </div>
