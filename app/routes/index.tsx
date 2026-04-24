@@ -14,9 +14,9 @@ function Home() {
       const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
       
       if (/android/i.test(userAgent)) {
-        setAppLink('https://play.google.com/store/apps/details?id=tu.app.id') 
+        setAppLink('https://play.google.com/store/apps/details?id=com.ww.iopgps') 
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
-        setAppLink('https://apps.apple.com/app/tu-app-id') 
+        setAppLink('https://apps.apple.com/bo/app/iopgps/id6446336643') 
       } else {
         setAppLink('https://kronosgps.com') 
       }
@@ -28,7 +28,8 @@ function Home() {
       {/* 🟢 CABECERA CORREGIDA 🟢 */}
       <header className="bg-[#D9F99D] border-b border-slate-300 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          
+
+         {/* SECCIÓN IZQUIERDA: LOGO + FRASE */}
           <div className="flex items-center gap-4">
             <a href="/" title="Volver al Inicio" className="flex-shrink-0">
               <img 
@@ -39,16 +40,18 @@ function Home() {
             </a>
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
-              <p className="text-sm md:text-base font-black text-slate-900 leading-tight">
-                CONTROLA EL TIEMPO,
-              </p>
               <p className="text-sm md:text-base font-black text-blue-700 leading-tight">
-                DOMINA TU RUTA
+                Controla el Tiempo, Domina tu Ruta.
               </p>
             </div>
           </div>
 
+          {/* NAVEGACIÓN (Derecha) */}
           <nav className="flex space-x-2 md:space-x-4 items-center">
+            <a href="#" className="hidden xl:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
+            <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
+            <a href={appLink} target="_blank" className="flex items-center gap-2 text-blue-700 hover:bg-white/50 border border-blue-200 px-3 py-2 rounded-lg font-bold text-xs md:text-sm transition shadow-sm bg-white">
+              <Download size={16} />
             {/* Botón Descarga */}
             <a 
               href={appLink}
@@ -63,7 +66,7 @@ function Home() {
 
             {/* Botón Plataforma */}
             <a 
-              href="https://tu-plataforma-gps.com" 
+              href="https://www.iopgps.com/" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
