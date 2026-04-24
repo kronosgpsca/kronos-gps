@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* 🟢 CABECERA CON FONDO VERDE MANZANA CLARO 🟢 */}
-      <header className="bg-[#CFF58E] border-b border-slate-200 p-2 sticky top-0 z-50">
+      <header className="bg-[#96B266] border-b border-slate-200 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           
           {/* SECCIÓN IZQUIERDA: LOGO + FRASE */}
@@ -102,12 +102,12 @@ function Home() {
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
               <div className="text-5xl mb-6">📊</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Gestión de Flotas</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos y controla el uso de combustible.</p>
+              <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos y controla el uso de tu vehículo.</p>
             </div>
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
               <div className="text-5xl mb-6">🛡️</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad Horus</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente a la fuerza de ventas y personal en campo.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente sobre las rutas y paradas de tus unidades.</p>
             </div>
           </div>
         </div>
