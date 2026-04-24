@@ -17,7 +17,7 @@ function Home() {
               <img 
                 src="/Logo_Kronos.png"
                 alt="Logotipo de Kronos GPS - Rastreo Satelital en Caracas" 
-                className="h-14 w-auto md:h-16 hover:opacity-80 transition" // Controla el tamaño aquí
+                className="h-18 w-auto md:h-22 hover:opacity-80 transition" // Controla el tamaño aquí
               />
             </a>
           </div>
