@@ -48,9 +48,7 @@ function Home() {
 
           {/* NAVEGACIÓN (Derecha) */}
           <nav className="flex space-x-2 md:space-x-4 items-center">
-            <a href="#" className="hidden xl:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
-            <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
-            <a href={appLink} target="_blank" className="flex items-center gap-2 text-blue-700 hover:bg-white/50 border border-blue-200 px-3 py-2 rounded-lg font-bold text-xs md:text-sm transition shadow-sm bg-white">
+          
               <Download size={16} />
             {/* Botón Descarga */}
             <a 
