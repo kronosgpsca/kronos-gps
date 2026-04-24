@@ -40,7 +40,7 @@ function Home() {
             </a>
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
-              <p className="text-sm md:text-base font-black text-blue-700 leading-tight">
+              <p className="text-sm md:text-base font-black text-blue-900 leading-tight">
                 Controla el Tiempo, Domina tu Ruta.
               </p>
             </div>
@@ -49,7 +49,7 @@ function Home() {
           {/* NAVEGACIÓN (Derecha) */}
           <nav className="flex space-x-2 md:space-x-4 items-center">
           
-              <Download size={16} />
+              
             {/* Botón Descarga */}
             <a 
               href={appLink}
