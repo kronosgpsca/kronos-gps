@@ -42,7 +42,7 @@ function Home() {
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
               <p className="text-sm md:text-base font-black text-blue-700 leading-tight">
-                Controlo el Tiempo, Domina tu Ruta.
+                Controla el Tiempo, Domina tu Ruta.
               </p>
              </div>
           </div>
