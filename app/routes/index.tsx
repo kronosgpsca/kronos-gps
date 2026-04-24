@@ -48,9 +48,19 @@ function Home() {
 
           {/* NAVEGACIÓN (Derecha) */}
           <nav className="flex space-x-2 md:space-x-4 items-center">
-          
-              
-            {/* Botón Descarga */}
+          {/* Enlaces de Navegación Principal */}
+          <div className="hidden xl:flex items-center space-x-6 mr-4">
+            <a href="#" className="text-slate-700 hover:text-blue-600 font-bold text-sm transition">
+            Inicio
+            </a>
+            <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-bold text-sm transition">
+            Servicios
+            </a>
+            <a href="#contacto" className="text-slate-700 hover:text-blue-600 font-bold text-sm transition">
+            Contáctanos
+            </a>
+          </div>
+       {/* Botón Descarga */}
             <a 
               href={appLink}
               target="_blank"
