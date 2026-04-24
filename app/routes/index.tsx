@@ -116,6 +116,9 @@ function Home() {
               <a href="https://instagram.com/kronosgps" target="_blank" className="text-slate-400 hover:text-pink-600 transition" title="Instagram">
                 <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">Instagram</span>
               </a>
+              <a href="https://tiktok.com/@kronosgps" target="_blank" className="text-slate-400 hover:text-black transition" title="TikTok">
+                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">TikTok</span>
+              </a>
             </div>
           </div>
 
