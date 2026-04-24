@@ -53,7 +53,7 @@ function Home() {
               <span className="sm:hidden">APP</span>
             </a>
 
-            <a href="https://tu-plataforma-gps.com" target="_blank" className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md">
+            <a href="https://www.iopgps.com/" target="_blank" className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md">
               <Monitor size={16} />
               <span className="hidden sm:inline">Plataforma</span>
               <span className="sm:hidden">Entrar</span>
