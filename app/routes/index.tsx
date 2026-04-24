@@ -17,7 +17,7 @@ function Home() {
               <img 
                 src="/Logo_Kronos.png"
                 alt="Logotipo de Kronos GPS - Rastreo Satelital en Caracas" 
-                className="h-22 w-auto md:h-28 hover:opacity-80 transition" // Controla el tamaño aquí
+                className="h-22 w-auto md:h-28 hover:opacity-80 transition"
               />
             </a>
           </div>
@@ -27,7 +27,7 @@ function Home() {
             <a href="#" className="hidden md:block text-slate-700 hover:text-blue-600 font-medium text-sm">Inicio</a>
             <a href="#servicios" className="text-slate-700 hover:text-blue-600 font-medium text-sm">Servicios</a>
             <a href="#contacto" className="text-slate-700 hover:text-blue-600 font-medium text-sm transition">
-            Cotiza Aquí
+              Cotiza Aquí
             </a>
           </nav>
         </div>
@@ -62,19 +62,16 @@ function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-extrabold text-slate-900 mb-16 tracking-tight">Nuestros Servicios Principales</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Servicio 1 */}
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
               <div className="text-5xl mb-6">🚗</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Rastreo Vehicular</h3>
               <p className="text-slate-600 leading-relaxed text-sm">Monitoreo constante para vehículos particulares y empresariales con cobertura total.</p>
             </div>
-            {/* Servicio 2 */}
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
               <div className="text-5xl mb-6">📊</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Gestión de Flotas</h3>
               <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos en el tráfico de la ciudad y controla el uso de combustible.</p>
             </div>
-            {/* Servicio 3 */}
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
               <div className="text-5xl mb-6">🛡️</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad Horus</h3>
@@ -104,24 +101,50 @@ function Home() {
         </div>
       </section>
 
-      {/* Footer / Contacto */}
+      {/* 🔴 FOOTER ACTUALIZADO CON REDES SOCIALES 🔴 */}
       <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold mb-4">KRONOS GPS</h3>
-            <p className="text-slate-600 leading-relaxed">Líderes en logística y ubicación satelital en Venezuela con tecnología de punta.</p>
+            <p className="text-slate-600 leading-relaxed mb-6">Líderes en logística y ubicación satelital en Venezuela con tecnología de punta.</p>
+            
+            {/* ENLACES A REDES SOCIALES */}
+            <div className="flex space-x-5">
+              <a href="https://facebook.com/kronosGPSsatelital" target="_blank" className="text-slate-400 hover:text-blue-600 transition" title="Facebook">
+                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">Facebook</span>
+              </a>
+              <a href="https://instagram.com/kronosgps" target="_blank" className="text-slate-400 hover:text-pink-600 transition" title="Instagram">
+                <span className="text-xs font-bold uppercase tracking-widest border border-slate-200 px-3 py-1 rounded">Instagram</span>
+              </a>
+            </div>
           </div>
+
           <div>
             <h3 className="text-xl font-bold mb-4">Estamos en contacto</h3>
-            <p className="text-slate-600">Caracas, Venezuela</p>
-            <p className="text-slate-600">Ventas: +58 (XXXX) XXXXXXX</p>
-            <p className="text-blue-600 font-bold mt-5 cursor-pointer hover:underline text-lg">Llamar a WhatsApp Directo</p>
+            <p className="text-slate-600">📍 Caracas, Venezuela</p>
+            <p className="text-slate-600">📞 Ventas: +58 (424) 3604526</p>
+            <a 
+              href="https://wa.me/584243604526?text=Hola,%20deseo%20más%20información" 
+              target="_blank"
+              className="inline-block text-blue-600 font-bold mt-5 hover:underline text-lg"
+            >
+              Chatear por WhatsApp Directo →
+            </a>
           </div>
         </div>
         <div className="border-t border-slate-100 mt-16 pt-10 text-center text-slate-500 text-sm">
           © {new Date().getFullYear()} Kronos GPS - Todos los derechos reservados.
         </div>
       </footer>
+
+      {/* 🟢 BOTÓN FLOTANTE DE WHATSAPP 🟢 */}
+      <a 
+        href="https://wa.me/584243604526?text=Hola,%20deseo%20una%20cotización" 
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-105 z-[100] font-bold flex items-center gap-2 border-2 border-white"
+      >
+        <span>WhatsApp</span>
+      </a>
     </div>
   )
 }
