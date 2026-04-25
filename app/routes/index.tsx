@@ -117,7 +117,7 @@ const slides = [
       </header>
 
    {/* 🔵 HERO SECTION: IMÁGENES COMO ARTE, TEXTO POR CÓDIGO 🔵 */}
-<main className="relative h-[500px] md:h-[550px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
+<main className="relative h-[550px] md:h-[500px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
   
   {/* Bloque de Imágenes del Carrusel */}
   {slides.map((slide, index) => (
@@ -364,15 +364,17 @@ const slides = [
   </div>
 </footer>
 
-      {/* WhatsApp Flotante */}
-      <a 
-        href="https://wa.me/584243604526" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-full shadow-2xl z-[100] font-bold flex items-center gap-2 border-2 border-white transition hover:scale-105"
-      >
-        <MessageCircle size={24} /> <span>WhatsApp</span>
-      </a>
+     {/* WhatsApp Flotante Vertical a la Derecha */}
+<a 
+  href="https://wa.me/584243604526" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="fixed right-0 top-1/2 -translate-y-1/2 translate-x-[calc(50%-20px)] rotate-[-90deg] bg-green-500 text-white px-6 py-3 rounded-t-2xl shadow-2xl z-[100] font-black flex items-center gap-2 border-x-2 border-t-2 border-white transition-all hover:translate-x-0 hover:bg-green-600 origin-bottom"
+  >
+  <MessageCircle size={24} className="rotate-90" /> 
+  <span className="uppercase tracking-widest text-sm">WhatsApp</span>
+</a>
+    
     </div>
   )
 }
