@@ -138,7 +138,9 @@ const slides = [
             alt={slide.title}
             className="w-full h-full object-cover" 
           />
-      ))}
+          <div className="absolute inset-0 bg-black/40 z-10" />
+          </div>
+    ))}
 
   {/* 🔘 INDICADORES (PUNTOS): Fijados al extremo inferior 🔘 */}
   <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-3">
