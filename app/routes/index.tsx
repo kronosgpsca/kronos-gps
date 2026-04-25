@@ -26,7 +26,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* 🟢 CABECERA CORREGIDA 🟢 */}
-      <header className="bg-[#D9F99D] border-b border-slate-300 p-2 sticky top-0 z-50">
+      <header className="bg-slate-100 border-b border-slate-300 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
 
          {/* SECCIÓN IZQUIERDA: LOGO + FRASE */}
