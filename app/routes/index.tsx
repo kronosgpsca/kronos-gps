@@ -27,12 +27,12 @@ const slides = [
     image: '/Imagen3.webp',
     title: ' ',
     subtitle: ' '
-  }
+  },
   {
     image: '/Imagen4.webp',
     title: ' ',
     subtitle: ' '
-  }
+  },
 ];
   
   useEffect(() => {
