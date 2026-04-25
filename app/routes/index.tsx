@@ -148,7 +148,7 @@ const slides = [
           {slides[currentSlide].subtitle}
         </p>
         
-        {/* Indicadores (Puntos) */}
+        {/* Indicadores (Puntos) posicionados al extremo inferior */}
        <div className="absolute bottom-6 left-0 right-0 z-30 flex justify-center gap-3">
           {slides.map((_, index) => (
           <button
@@ -157,6 +157,7 @@ const slides = [
           className={`h-2.5 transition-all duration-300 rounded-full shadow-md ${
             index === currentSlide ? 'w-10 bg-blue-500' : 'w-2.5 bg-white/50 hover:bg-white/80'
            }`}
+            aria-label={`Ir a imagen ${index + 1}`}
             />
           ))}
         </div>
