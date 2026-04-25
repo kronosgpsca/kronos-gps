@@ -15,12 +15,18 @@ function Home() {
 const slides = [
   {
     image: '/Imagen1.webp',
+    title: ' ',
+    subtitle: ' '
    },
   {
     image: '/Imagen2.webp',
+    title: ' ',
+    subtitle: ' '
   },
   {
     image: '/Imagen3.webp',
+    title: ' ',
+    subtitle: ' '
   }
 ];
   
