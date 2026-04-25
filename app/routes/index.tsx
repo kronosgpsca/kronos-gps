@@ -135,37 +135,61 @@ function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-4 text-blue-600">Síguenos o Contáctanos</h3>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://facebook.com/kronosGPSsatelital" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase">
-                <Facebook size={18} /> Facebook
-              </a>
-              <a href="https://instagram.com/kronosgps" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-pink-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase">
-                <Instagram size={18} /> Instagram
-              </a>
-              <a href="https://tiktok.com/@kronosgps" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-black transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase">
-                <Music2 size={18} /> TikTok
-              </a>
-            </div>
-          </div>
-          <div>
-            <p className="text-slate-600">📍 Caracas, Venezuela</p>
-            <p className="text-slate-600">📞 +58 (424) 3604526</p>
-            <p className="text-slate-600">
-            📧 <a href="mailto:kronosgpsca@gmail.com" className="hover:text-blue-600 transition">
-                  kronosgpsca@gmail.com
-                </a>
-            </p>
-            <a href="https://wa.me/584243604526" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-500 font-bold mt-4 hover:underline">
-              <MessageCircle size={22} /> Chatear por WhatsApp →
-            </a>
-          </div>
+{/* Footer */}
+<footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Título Principal de la Sección */}
+    <div className="mb-12 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-black text-blue-700 tracking-tight uppercase">
+        Síguenos o Contáctanos
+      </h2>
+      <div className="h-1.5 w-20 bg-blue-600 mt-2 mx-auto md:mx-0 rounded-full"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Columna Redes Sociales */}
+      <div>
+        <h3 className="text-xl font-bold mb-6 text-slate-800 uppercase tracking-wide">Redes Sociales</h3>
+        <div className="flex flex-wrap gap-4">
+          <a href="https://facebook.com/kronosGPSsatelital" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition border border-slate-200 px-4 py-2.5 rounded-xl text-sm font-bold uppercase shadow-sm hover:shadow-md">
+            <Facebook size={18} /> Facebook
+          </a>
+          <a href="https://instagram.com/kronosgps" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-pink-600 transition border border-slate-200 px-4 py-2.5 rounded-xl text-sm font-bold uppercase shadow-sm hover:shadow-md">
+            <Instagram size={18} /> Instagram
+          </a>
+          <a href="https://tiktok.com/@kronosgps" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-black transition border border-slate-200 px-4 py-2.5 rounded-xl text-sm font-bold uppercase shadow-sm hover:shadow-md">
+            <Music2 size={18} /> TikTok
+          </a>
         </div>
-      </footer>
+      </div>
+
+      {/* Columna Datos de Contacto */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-bold mb-6 text-slate-800 uppercase tracking-wide">Información Directa</h3>
+        <p className="text-slate-600 flex items-center gap-2 text-lg">
+          <span>📍</span> Caracas, Venezuela
+        </p>
+        <p className="text-slate-600 flex items-center gap-2 text-lg">
+          <span>📞</span> +58 (424) 3604526
+        </p>
+        <p className="text-slate-600 flex items-center gap-2 text-lg">
+          <span>📧</span> 
+          <a href="mailto:kronosgpsca@gmail.com" className="hover:text-blue-600 transition underline underline-offset-4">
+            kronosgpsca@gmail.com
+          </a>
+        </p>
+        
+        <div className="pt-4">
+          <a href="https://wa.me/584243604526" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-green-600 font-black text-xl hover:text-green-700 transition">
+            <MessageCircle size={26} /> 
+            ¡Chatea con nosotros! →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
       {/* WhatsApp Flotante */}
       <a 
