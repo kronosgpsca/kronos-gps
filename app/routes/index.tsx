@@ -155,7 +155,11 @@ function Home() {
           <div>
             <p className="text-slate-600">📍 Caracas, Venezuela</p>
             <p className="text-slate-600">📞 +58 (424) 3604526</p>
-            <p className="text-slate-600">📧 kronosgpsca@gmail.com</p>
+            <p className="text-slate-600">
+            📧 <a href="mailto:kronosgpsca@gmail.com" className="hover:text-blue-600 transition">
+                  kronosgpsca@gmail.com
+                </a>
+            </p>
             <a href="https://wa.me/584243604526" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-500 font-bold mt-4 hover:underline">
               <MessageCircle size={22} /> Chatear por WhatsApp →
             </a>
