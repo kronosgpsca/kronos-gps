@@ -128,7 +128,7 @@ function Home() {
       <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
         <div className="text-5xl mb-6">🚗</div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Rastreo Vehicular</h3>
-        <p className="text-slate-600 leading-relaxed text-sm font-medium">
+        <p className="text-slate-600 leading-relaxed text-sm font-medium text-justify">
           La función elemental es la triangulación mediante satélites (GPS) para determinar la posición exacta de la unidad. Esto permite a dueños de negocios y familias conocer la ubicación geográfica, la velocidad de desplazamiento y el sentido de la ruta con una precisión de pocos metros.
         </p>
       </div>
