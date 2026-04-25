@@ -117,36 +117,32 @@ const slides = [
       </header>
 
     {/*🟢 Hero Section con Carrusel 🟢*/}
-    <main className="relative h-[450px] md:h-[500px] w-full overflow-hidden flex items-center justify-center">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          {/* Overlay oscuro para legibilidad */}
-           <img
-            src={slide.image}
-            alt={slide.title}
-            className="w-full h-full object-cover object-bottom"
-          />
-        </div>
-      ))}
+    {/* 🔵 HERO SECTION: IMÁGENES COMO ARTE, TEXTO POR CÓDIGO 🔵 */}
 
-      {/* Contenido del Texto */}
-      <div className="relative z-20 max-w-5xl mx-auto text-center px-6">
-        <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-8 tracking-tight drop-shadow-lg">
-          {slides[currentSlide].title.split('Real')[0]}
-          {slides[currentSlide].title.includes('Real') && (
-            <span className="text-blue-400">Tiempo Real</span>
-          )}
-          {!slides[currentSlide].title.includes('Real') && slides[currentSlide].title}
-        </h2>
-
-        <p className="text-lg md:text-xl text-slate-100 mb-12 leading-relaxed max-w-3xl mx-auto font-medium drop-shadow-md">
-          {slides[currentSlide].subtitle}
-        </p>
+      <main className="relative h-[450px] md:h-[600px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
+          {slides.map((slide, index) => (
+      <div
+      key={index}
+      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+        index === currentSlide ? 'opacity-100' : 'opacity-0'
+      }`}
+      >
+      {/* Efecto de fondo sutil para dar profundidad */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center blur-lg scale-105 opacity-20"
+        style={{ backgroundImage: `url(${slide.image})` }}
+      />
+      
+      {/* La Imagen Limpia (Sin texto) */}
+      <div className="relative h-full w-full flex items-center justify-center z-10">
+        <img
+          src={slide.image}
+          alt="Visual Kronos GPS"
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+    </div>
+  ))}
         
         {/* Indicadores (Puntos) posicionados al extremo inferior */}
        <div className="absolute bottom-6 left-0 right-0 z-30 flex justify-center gap-3">
