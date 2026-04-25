@@ -153,16 +153,7 @@ const slides = [
         <p className="text-lg md:text-xl text-slate-100 mb-12 leading-relaxed max-w-3xl mx-auto font-medium drop-shadow-md">
           {slides[currentSlide].subtitle}
         </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg">
-            Saber más
-          </button>
-          <button className="bg-white/10 backdrop-blur-md text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition shadow-lg border border-white/30">
-            Cotizar
-          </button>
-        </div>
-
+        
         {/* Indicadores (Puntos) */}
         <div className="flex justify-center gap-3 mt-12">
           {slides.map((_, index) => (
