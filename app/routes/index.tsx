@@ -117,7 +117,7 @@ const slides = [
       </header>
 
     {/*🟢 Hero Section con Carrusel 🟢*/}
-    <main className="relative h-[600px] md:h-[700px] w-full overflow-hidden flex items-center justify-center">
+    <main className="relative h-[450px] md:h-[500px] w-full overflow-hidden flex items-center justify-center">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -149,14 +149,14 @@ const slides = [
         </p>
         
         {/* Indicadores (Puntos) */}
-        <div className="flex justify-center gap-3 mt-12">
+       <div className="absolute bottom-6 left-0 right-0 z-30 flex justify-center gap-3">
           {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`h-2.5 transition-all duration-300 rounded-full ${
-                index === currentSlide ? 'w-10 bg-blue-500' : 'w-2.5 bg-white/50'
-              }`}
+          <button
+          key={index}
+          onClick={() => setCurrentSlide(index)}
+          className={`h-2.5 transition-all duration-300 rounded-full shadow-md ${
+            index === currentSlide ? 'w-10 bg-blue-500' : 'w-2.5 bg-white/50 hover:bg-white/80'
+           }`}
             />
           ))}
         </div>
