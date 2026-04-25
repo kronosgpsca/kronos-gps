@@ -129,7 +129,7 @@ const slides = [
            <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-bottom"
           />
         </div>
       ))}
