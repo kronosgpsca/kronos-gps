@@ -111,6 +111,62 @@ function Home() {
         </div>
       </main>
 
+{/* Sección En Números */}
+<section className="py-20 px-6 bg-slate-900 text-white">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Título de Sección */}
+    <div className="mb-16 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-black text-blue-400 tracking-tight uppercase">
+        Nuestra Trayectoria en Números
+      </h2>
+      <div className="h-1.5 w-20 bg-blue-500 mt-2 mx-auto md:mx-0 rounded-full"></div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+      
+      {/* Columna 1: Experiencia */}
+      <div className="flex flex-col items-center p-6 space-y-4">
+        <div className="text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+        </div>
+        <div className="text-5xl font-black text-white">+10</div>
+        <p className="text-blue-200 font-bold uppercase tracking-widest text-sm">Años de Experiencia</p>
+        <p className="text-slate-400 text-sm leading-relaxed">
+          Liderando soluciones de rastreo satelital con tecnología de punta.
+        </p>
+      </div>
+
+      {/* Columna 2: Vehículos */}
+      <div className="flex flex-col items-center p-6 space-y-4">
+        <div className="text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <div className="text-5xl font-black text-white">+500</div>
+        <p className="text-blue-200 font-bold uppercase tracking-widest text-sm">Vehículos con Servicio</p>
+        <p className="text-slate-400 text-sm leading-relaxed">
+          Unidades activas optimizando rutas y garantizando seguridad total.
+        </p>
+      </div>
+
+      {/* Columna 3: Cobertura */}
+      <div className="flex flex-col items-center p-6 space-y-4">
+        <div className="text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div className="text-5xl font-black text-white">+ Cobertura</div>
+        <p className="text-blue-200 font-bold uppercase tracking-widest text-sm">Toda Latinoamérica</p>
+        <p className="text-slate-400 text-sm leading-relaxed text-center">
+          Servicio de rastreo sin fronteras, con conectividad global y local.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+      
+
+      
 {/* Sección de Servicios */}
 <section id="servicios" className="py-24 px-6 bg-white">
   <div className="max-w-6xl mx-auto">
