@@ -118,7 +118,7 @@ function Home() {
     {/* Título Principal Unificado */}
     <div className="mb-16 text-center md:text-left">
       <h2 className="text-3xl md:text-4xl font-black text-blue-700 tracking-tight uppercase">
-        Nuestros Servicios Principales
+        Nuestros Servicios
       </h2>
       <div className="h-1.5 w-20 bg-blue-600 mt-2 mx-auto md:mx-0 rounded-full"></div>
     </div>
@@ -129,7 +129,7 @@ function Home() {
         <div className="text-5xl mb-6">🚗</div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Rastreo Vehicular</h3>
         <p className="text-slate-600 leading-relaxed text-sm font-medium">
-          Monitoreo constante para vehículos particulares y empresariales con cobertura total.
+          La función elemental es la triangulación mediante satélites (GPS) para determinar la posición exacta de la unidad. Esto permite a dueños de negocios y familias conocer la ubicación geográfica, la velocidad de desplazamiento y el sentido de la ruta con una precisión de pocos metros.
         </p>
       </div>
 
