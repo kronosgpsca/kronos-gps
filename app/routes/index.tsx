@@ -111,30 +111,49 @@ function Home() {
         </div>
       </main>
 
-      {/* Servicios */}
-      <section id="servicios" className="py-24 px-6 bg-white text-center">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-slate-900 mb-16 tracking-tight">Nuestros Servicios Principales</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-              <div className="text-5xl mb-6">🚗</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Rastreo Vehicular</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Monitoreo constante para vehículos particulares y empresariales.</p>
-            </div>
-            <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-              <div className="text-5xl mb-6">📊</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Gestión de Flotas</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Optimiza tus tiempos y controla el uso de combustible.</p>
-            </div>
-            <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-              <div className="text-5xl mb-6">🛡️</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente a tu vehículo, conociendo sus rutas y paradas.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Sección de Servicios */}
+<section id="servicios" className="py-24 px-6 bg-white">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Título Principal Unificado */}
+    <div className="mb-16 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-black text-blue-700 tracking-tight uppercase">
+        Nuestros Servicios Principales
+      </h2>
+      <div className="h-1.5 w-20 bg-blue-600 mt-2 mx-auto md:mx-0 rounded-full"></div>
+    </div>
 
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Servicio 1 */}
+      <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+        <div className="text-5xl mb-6">🚗</div>
+        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Rastreo Vehicular</h3>
+        <p className="text-slate-600 leading-relaxed text-sm font-medium">
+          Monitoreo constante para vehículos particulares y empresariales con cobertura total.
+        </p>
+      </div>
+
+      {/* Servicio 2 */}
+      <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+        <div className="text-5xl mb-6">📊</div>
+        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Gestión de Flotas</h3>
+        <p className="text-slate-600 leading-relaxed text-sm font-medium">
+          Optimiza tus tiempos en el tráfico de la ciudad y controla el uso de combustible.
+        </p>
+      </div>
+
+      {/* Servicio 3 */}
+      <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+        <div className="text-5xl mb-6">🛡️</div>
+        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Seguridad</h3>
+        <p className="text-slate-600 leading-relaxed text-sm font-medium">
+          Control eficiente a tu vehículo, conociendo con exactitud sus rutas y paradas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+      
 {/* Footer */}
 <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
   <div className="max-w-6xl mx-auto">
