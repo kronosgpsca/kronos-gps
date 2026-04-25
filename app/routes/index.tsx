@@ -40,7 +40,7 @@ function Home() {
             </a>
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
-              <p className="text-sm md:text-base font-black text-blue-900 leading-tight">
+              <p className="text-sm md:text-base font-black text-blue-600 leading-tight">
                 Controla el Tiempo, Domina tu Ruta.
               </p>
             </div>
@@ -80,8 +80,8 @@ function Home() {
               className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
             >
               <Monitor size={16} />
-              <span className="hidden sm:inline">Plataforma</span>
-              <span className="sm:hidden">Entrar</span>
+              <span className="hidden sm:inline">Ingresa a Plataforma</span>
+              <span className="sm:hidden">Ingresar</span>
             </a>
           </nav>
         </div>
