@@ -9,6 +9,26 @@ export const Route = createFileRoute('/')({
 function Home() {
   const [appLink, setAppLink] = useState('#')
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+const slides = [
+  {
+    image: '/slider1.jpg', // Asegúrate de tener estas imágenes en tu carpeta public
+    title: 'Control y Monitoreo en Tiempo Real',
+    subtitle: 'La mejor herramienta de gestión empresarial para tu personal y flotas en Caracas.'
+  },
+  {
+    image: '/slider2.jpg',
+    title: 'Protege tus Activos con Tecnología',
+    subtitle: 'Seguridad avanzada y rastreo satelital con cobertura en toda Latinoamérica.'
+  },
+  {
+    image: '/slider3.jpg',
+    title: 'Optimiza tus Rutas hoy mismo',
+    subtitle: 'Reduce costos de combustible y mejora la puntualidad de tus entregas.'
+  }
+];
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
