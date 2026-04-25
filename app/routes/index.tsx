@@ -129,7 +129,7 @@ const slides = [
            <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       ))}
@@ -164,7 +164,7 @@ const slides = [
       </div>
     </main>
 
-{/* Sección En Números */}
+{/* 🟢 Sección En Números 🟢 */}
 <section className="py-20 px-6 bg-slate-100 text-slate-900">
   <div className="max-w-6xl mx-auto">
     
@@ -220,7 +220,7 @@ const slides = [
       
 
       
-{/* Sección de Servicios */}
+{/* 🟢 Sección de Servicios 🟢 */}
 <section id="servicios" className="py-24 px-6 bg-white">
   <div className="max-w-6xl mx-auto">
     
@@ -277,7 +277,7 @@ const slides = [
   </div>
 </section>
       
-{/* Footer */}
+{/* 🟢 Footer - SECCION CONTACTANOS 🟢 */}
 <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
   <div className="max-w-6xl mx-auto">
     
