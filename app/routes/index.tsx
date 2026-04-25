@@ -28,6 +28,11 @@ const slides = [
     title: ' ',
     subtitle: ' '
   }
+  {
+    image: '/Imagen4.webp',
+    title: ' ',
+    subtitle: ' '
+  }
 ];
   
   useEffect(() => {
@@ -127,22 +132,16 @@ const slides = [
         index === currentSlide ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      {/* Fondo difuminado estético */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center blur-lg scale-105 opacity-20"
-        style={{ backgroundImage: `url(${slide.image})` }}
-      />
-      
-      {/* La Imagen Principal (Adaptable y sin recortes) */}
-      <div className="relative h-full w-full flex items-center justify-center z-10 p-4">
-        <img
-          src={slide.image}
-          alt="Visual Kronos GPS"
-          className="max-h-full max-w-full object-contain drop-shadow-2xl"
-        />
-      </div>
-    </div>
-  ))}
+     {/* Imagen Expandida que cubre todo el fondo */}
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-cover" 
+          />
+          {/* Overlay oscuro opcional para asegurar legibilidad del texto sobre fotos brillantes */}
+          <div className="absolute inset-0 bg-black/30 z-10" />
+        </div>
+      ))}
 
   {/* 🔘 INDICADORES (PUNTOS): Fijados al extremo inferior 🔘 */}
   <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-3">
