@@ -117,7 +117,7 @@ const slides = [
       </header>
 
    {/* 🔵 HERO SECTION: IMÁGENES COMO ARTE, TEXTO POR CÓDIGO 🔵 */}
-<main className="relative h-[450px] md:h-[600px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
+<main className="relative h-[500px] md:h-[550px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
   
   {/* Bloque de Imágenes del Carrusel */}
   {slides.map((slide, index) => (
