@@ -137,10 +137,7 @@ const slides = [
 
       {/* Contenido del Texto */}
       <div className="relative z-20 max-w-5xl mx-auto text-center px-6">
-        <div className="inline-flex items-center bg-blue-600/90 text-white px-4 py-1.5 rounded-full text-xs font-semibold mb-6 backdrop-blur-sm">
-          <span>🚀</span>
-          <span className="ml-2 uppercase tracking-wider">Tecnología de Vanguardia</span>
-        </div>
+        
         
         <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-8 tracking-tight drop-shadow-lg">
           {slides[currentSlide].title.split('Real')[0]}
