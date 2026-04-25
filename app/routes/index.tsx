@@ -128,8 +128,8 @@ function Home() {
             </div>
             <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition">
               <div className="text-5xl mb-6">🛡️</div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad Horus</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente a la fuerza de ventas y personal en campo.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Seguridad</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">Control eficiente a tu vehículo, conociendo sus rutas y paradas.</p>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ function Home() {
       <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-blue-900">KRONOS GPS</h3>
+            <h3 className="text-2xl font-bold mb-4 text-blue-600">Síguenos o Contáctanos</h3>
             <div className="flex flex-wrap gap-4">
               <a href="https://facebook.com/kronosGPSsatelital" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition border border-slate-200 px-3 py-2 rounded-lg text-sm font-bold uppercase">
                 <Facebook size={18} /> Facebook
