@@ -138,16 +138,17 @@ function Home() {
         <div className="text-5xl mb-6">📊</div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Gestión de Flotas</h3>
         <p className="text-slate-600 leading-relaxed text-sm font-medium">
-          Optimiza tus tiempos en el tráfico de la ciudad y controla el uso de combustible.
+          Para las empresas, su función principal es la eficiencia. Al registrar rutas, paradas y tiempos de ralentí (motor encendido sin movimiento), el rastreo vehicular permite:
+          Reducir el consumo de combustible al evitar rutas innecesarias. Aumentar la puntualidad en entregas o servicios. Fiscalizar el uso del vehículo, asegurando que se utilice exclusivamente para fines laborales y no personales.
         </p>
       </div>
 
       {/* Servicio 3 */}
       <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
         <div className="text-5xl mb-6">🛡️</div>
-        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Seguridad</h3>
+        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Seguridad y Protección de Activos</h3>
         <p className="text-slate-600 leading-relaxed text-sm font-medium">
-          Control eficiente a tu vehículo, conociendo con exactitud sus rutas y paradas.
+          Actúa como un escudo preventivo y reactivo. Mediante el uso de geocercas (áreas virtuales permitidas), el sistema notifica de inmediato si un vehículo sale de una zona segura. En caso de robo o uso no autorizado, el rastreo permite la recuperación rápida del activo y, ofrece la capacidad de ejecutar un apagado remoto del motor desde una aplicación.
         </p>
       </div>
     </div>
