@@ -138,9 +138,6 @@ const slides = [
             alt={slide.title}
             className="w-full h-full object-cover" 
           />
-          {/* Overlay oscuro opcional para asegurar legibilidad del texto sobre fotos brillantes */}
-          <div className="absolute inset-0 bg-black/30 z-10" />
-        </div>
       ))}
 
   {/* 🔘 INDICADORES (PUNTOS): Fijados al extremo inferior 🔘 */}
