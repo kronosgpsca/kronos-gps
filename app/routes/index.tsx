@@ -87,29 +87,67 @@ function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <main className="py-24 px-6 bg-slate-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
-            <span>🚀</span>
-            <span className="ml-2 uppercase tracking-wider">Tecnología de Vanguardia</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 tracking-tight">
-            Control y Monitoreo en <span className="text-blue-600">Tiempo Real</span>
-          </h2>
-          <p className="text-xl text-slate-600 mb-12 leading-relaxed max-w-3xl mx-auto font-medium">
-            La mejor herramienta de gestión empresarial para tu personal y flotas en Caracas. Optimiza tiempos y protege tus activos.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-800 transition shadow-lg">
-              Saber más
-            </button>
-            <button className="bg-white text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg border border-slate-200">
-              Cotizar
-            </button>
-          </div>
+    {/*🟢 Hero Section con Carrusel 🟢*/}
+    <main className="relative h-[600px] md:h-[700px] w-full overflow-hidden flex items-center justify-center">
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {/* Overlay oscuro para legibilidad */}
+          <div className="absolute inset-0 bg-slate-900/50 z-10" />
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-cover"
+          />
         </div>
-      </main>
+      ))}
+
+      {/* Contenido del Texto */}
+      <div className="relative z-20 max-w-5xl mx-auto text-center px-6">
+        <div className="inline-flex items-center bg-blue-600/90 text-white px-4 py-1.5 rounded-full text-xs font-semibold mb-6 backdrop-blur-sm">
+          <span>🚀</span>
+          <span className="ml-2 uppercase tracking-wider">Tecnología de Vanguardia</span>
+        </div>
+        
+        <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-8 tracking-tight drop-shadow-lg">
+          {slides[currentSlide].title.split('Real')[0]}
+          {slides[currentSlide].title.includes('Real') && (
+            <span className="text-blue-400">Tiempo Real</span>
+          )}
+          {!slides[currentSlide].title.includes('Real') && slides[currentSlide].title}
+        </h2>
+
+        <p className="text-lg md:text-xl text-slate-100 mb-12 leading-relaxed max-w-3xl mx-auto font-medium drop-shadow-md">
+          {slides[currentSlide].subtitle}
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg">
+            Saber más
+          </button>
+          <button className="bg-white/10 backdrop-blur-md text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition shadow-lg border border-white/30">
+            Cotizar
+          </button>
+        </div>
+
+        {/* Indicadores (Puntos) */}
+        <div className="flex justify-center gap-3 mt-12">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-2.5 transition-all duration-300 rounded-full ${
+                index === currentSlide ? 'w-10 bg-blue-500' : 'w-2.5 bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </main>
 
 {/* Sección En Números */}
 <section className="py-20 px-6 bg-slate-100 text-slate-900">
