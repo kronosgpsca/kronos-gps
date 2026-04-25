@@ -15,18 +15,18 @@ function Home() {
 const slides = [
   {
     image: '/Imagen1.webp',
-    title: 'Tecnología de Vanguardia ',
-    subtitle: 'xxxxx '
+    title: ' ',
+    subtitle: ' '
    },
   {
     image: '/Imagen2.webp',
-    title: 'Cobertura en toda Lationamerica ',
-    subtitle: 'xxxx1 '
+    title: ' ',
+    subtitle: ' '
   },
   {
     image: '/Imagen3.webp',
-    title: 'Seguridad para ti y los tuyos ',
-    subtitle: 'xxxxx2 '
+    title: ' ',
+    subtitle: ' '
   }
 ];
   
@@ -138,7 +138,7 @@ const slides = [
         <img
           src={slide.image}
           alt="Visual Kronos GPS"
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain drop-shadow-2xl"
         />
       </div>
     </div>
@@ -215,7 +215,6 @@ const slides = [
     </div>
   </div>
 </section>
-      
 
       
 {/* 🟢 Sección de Servicios 🟢 */}
@@ -230,8 +229,10 @@ const slides = [
       <div className="h-1.5 w-20 bg-blue-600 mt-2 mx-auto md:mx-0 rounded-full"></div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-      {/* Servicio 1 */}
+    {/* Grid ajustado a 2 columnas para que 4 servicios queden simétricos */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      {/* Servicio 1: Rastreo */}
       <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
         <div className="text-5xl mb-6">🚗</div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Rastreo Vehicular</h3>
@@ -240,41 +241,73 @@ const slides = [
         </p>
       </div>
 
-    {/* Servicio 2 */}
-    <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
-      <div className="text-5xl mb-6">📊</div>
-      <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Gestión de Flotas</h3>
-      <p className="text-slate-600 leading-relaxed text-sm font-medium text-justify mb-4">
-      Para las empresas, su función principal es la eficiencia. Al registrar rutas, paradas y tiempos de ralentí (motor encendido sin movimiento), el rastreo vehicular permite:
-      </p>
-      <ul className="text-slate-600 text-sm font-medium space-y-2">
-        <li className="flex items-start">
-        <span className="text-blue-600 mr-2">•</span>
-        <span>Reducir el consumo de combustible al evitar rutas innecesarias.</span>
-        </li>
-        <li className="flex items-start">
-        <span className="text-blue-600 mr-2">•</span>
-        <span>Aumentar la puntualidad en entregas o servicios.</span>
-        </li>
-        <li className="flex items-start">
-        <span className="text-blue-600 mr-2">•</span>
-        <span>Fiscalizar el uso del vehículo, asegurando que se utilice exclusivamente para fines laborales.</span>
-        </li>
-      </ul>
-    </div>
+      {/* Servicio 2: Gestión de Flotas */}
+      <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
+        <div className="text-5xl mb-6">📊</div>
+        <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Gestión de Flotas</h3>
+        <p className="text-slate-600 leading-relaxed text-sm font-medium text-justify mb-4">
+          Para las empresas, su función principal es la eficiencia. Al registrar rutas, paradas y tiempos de ralentí (motor encendido sin movimiento), el rastreo vehicular permite:
+        </p>
+        <ul className="text-slate-600 text-sm font-medium space-y-2">
+          <li className="flex items-start">
+            <span className="text-blue-600 mr-2">•</span>
+            <span>Reducir el consumo de combustible al evitar rutas innecesarias.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 mr-2">•</span>
+            <span>Aumentar la puntualidad en entregas o servicios.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-600 mr-2">•</span>
+            <span>Fiscalizar el uso del vehículo, asegurando fines laborales.</span>
+          </li>
+        </ul>
+      </div>
 
-      {/* Servicio 3 */}
+      {/* Servicio 3: Seguridad */}
       <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300">
         <div className="text-5xl mb-6">🛡️</div>
         <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Seguridad</h3>
         <p className="text-slate-600 leading-relaxed text-sm font-medium text-justify">
-          Actúa como un escudo preventivo y reactivo. Mediante el uso de geocercas (áreas virtuales permitidas), el sistema notifica de inmediato si un vehículo sale de una zona segura. En caso de robo o uso no autorizado, el rastreo permite la recuperación rápida del activo y, ofrece la capacidad de ejecutar un apagado remoto del motor desde una aplicación.
+          Actúa como un escudo preventivo y reactivo. Mediante el uso de geocercas, el sistema notifica si un vehículo sale de una zona segura. En caso de robo, permite la recuperación rápida y ofrece la capacidad de ejecutar un apagado remoto del motor desde la aplicación.
         </p>
+      </div>
+
+      {/* Servicio 4: Reportes Estratégicos (NUEVO) */}
+      <div className="bg-slate-50 p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:transform hover:-translate-y-2 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div className="text-5xl mb-6">📋</div>
+          <h3 className="text-2xl font-bold text-slate-900 mb-3 uppercase tracking-wide">Reportes e Inteligencia</h3>
+          <p className="text-slate-600 leading-relaxed text-sm font-medium text-justify mb-4">
+            Contar con reportes convierte al GPS en un <strong>socio estratégico</strong> y no solo en un gasto de seguridad. Transforma el monitoreo pasivo en gestión proactiva:
+          </p>
+          <ul className="text-slate-600 text-sm font-medium space-y-3">
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-2 font-bold">›</span>
+              <span><strong>Evidencia:</strong> Gestión objetiva basada en datos reales, no suposiciones.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-2 font-bold">›</span>
+              <span><strong>Toma de Decisiones:</strong> Identifica patrones como horas pico o áreas de tráfico.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-2 font-bold">›</span>
+              <span><strong>Sostenibilidad:</strong> Reduce la huella de carbono optimizando el combustible.</span>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-6 pt-4 border-t border-slate-200">
+          <p className="text-blue-700 font-black italic text-center text-sm">
+            "No puedes mejorar lo que no mides"
+          </p>
         </div>
       </div>
+
+    </div>
   </div>
 </section>
       
+     
 {/* 🟢 Footer - SECCION CONTACTANOS 🟢 */}
 <footer id="contacto" className="bg-white text-slate-900 py-16 px-6 border-t border-slate-100 font-medium">
   <div className="max-w-6xl mx-auto">
