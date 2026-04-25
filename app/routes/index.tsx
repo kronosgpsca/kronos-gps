@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Facebook, Instagram, Music2, MessageCircle, Download, Monitor } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react';
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -43,8 +44,16 @@ const slides = [
     }
   }, [])
 
+  useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, 5000);
+  return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-sans">
+    
       {/* 🟢 CABECERA CORREGIDA 🟢 */}
       <header className="bg-[#E2E8F0] border-b border-slate-300 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
