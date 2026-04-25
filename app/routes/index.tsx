@@ -116,49 +116,51 @@ const slides = [
         </div>
       </header>
 
-    {/*🟢 Hero Section con Carrusel 🟢*/}
-    {/* 🔵 HERO SECTION: IMÁGENES COMO ARTE, TEXTO POR CÓDIGO 🔵 */}
-
-      <main className="relative h-[450px] md:h-[600px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
-          {slides.map((slide, index) => (
-      <div
+   {/* 🔵 HERO SECTION: IMÁGENES COMO ARTE, TEXTO POR CÓDIGO 🔵 */}
+<main className="relative h-[450px] md:h-[600px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
+  
+  {/* Bloque de Imágenes del Carrusel */}
+  {slides.map((slide, index) => (
+    <div
       key={index}
       className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
         index === currentSlide ? 'opacity-100' : 'opacity-0'
       }`}
-      >
-      {/* Efecto de fondo sutil para dar profundidad */}
+    >
+      {/* Fondo difuminado estético */}
       <div 
         className="absolute inset-0 bg-cover bg-center blur-lg scale-105 opacity-20"
         style={{ backgroundImage: `url(${slide.image})` }}
       />
       
-      {/* La Imagen Limpia (Sin texto) */}
-      <div className="relative h-full w-full flex items-center justify-center z-10">
+      {/* La Imagen Principal (Adaptable y sin recortes) */}
+      <div className="relative h-full w-full flex items-center justify-center z-10 p-4">
         <img
           src={slide.image}
           alt="Visual Kronos GPS"
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain drop-shadow-2xl"
         />
       </div>
     </div>
   ))}
-        
-        {/* Indicadores (Puntos) posicionados al extremo inferior */}
-       <div className="absolute bottom-6 left-0 right-0 z-30 flex justify-center gap-3">
-          {slides.map((_, index) => (
-          <button
-          key={index}
-          onClick={() => setCurrentSlide(index)}
-          className={`h-2.5 transition-all duration-300 rounded-full shadow-md ${
-            index === currentSlide ? 'w-10 bg-blue-500' : 'w-2.5 bg-white/50 hover:bg-white/80'
-           }`}
-            aria-label={`Ir a imagen ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
-    </main>
+
+  {/* 🔘 INDICADORES (PUNTOS): Fijados al extremo inferior 🔘 */}
+  <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-3">
+    {slides.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentSlide(index)}
+        className={`h-2.5 transition-all duration-300 rounded-full shadow-lg ${
+          index === currentSlide 
+            ? 'w-10 bg-blue-500' 
+            : 'w-2.5 bg-white/40 hover:bg-white/80'
+        }`}
+        aria-label={`Ir a imagen ${index + 1}`}
+      />
+    ))}
+  </div>
+
+</main>
 
 {/* 🟢 Sección En Números 🟢 */}
 <section className="py-20 px-6 bg-slate-100 text-slate-900">
