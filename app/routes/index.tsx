@@ -40,7 +40,7 @@ function Home() {
             </a>
             
             <div className="hidden lg:flex flex-col border-l border-slate-400 pl-4">
-              <p className="text-sm md:text-base font-black text-blue-600 leading-tight">
+              <p className="text-lg md:text-xl font-black text-blue-600 leading-tight italic">
                 Controla el Tiempo, Domina tu Ruta.
               </p>
             </div>
