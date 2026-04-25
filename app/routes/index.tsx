@@ -126,8 +126,7 @@ const slides = [
           }`}
         >
           {/* Overlay oscuro para legibilidad */}
-          <div className="absolute inset-0 bg-slate-900/50 z-10" />
-          <img
+           <img
             src={slide.image}
             alt={slide.title}
             className="w-full h-full object-cover"
@@ -137,8 +136,6 @@ const slides = [
 
       {/* Contenido del Texto */}
       <div className="relative z-20 max-w-5xl mx-auto text-center px-6">
-        
-        
         <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-8 tracking-tight drop-shadow-lg">
           {slides[currentSlide].title.split('Real')[0]}
           {slides[currentSlide].title.includes('Real') && (
