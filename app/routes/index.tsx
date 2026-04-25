@@ -15,18 +15,18 @@ function Home() {
 const slides = [
   {
     image: '/Imagen1.webp',
-    title: ' ',
-    subtitle: ' '
+    title: 'Tecnología de Vanguardia ',
+    subtitle: 'xxxxx '
    },
   {
     image: '/Imagen2.webp',
-    title: ' ',
-    subtitle: ' '
+    title: 'Cobertura en toda Lationamerica ',
+    subtitle: 'xxxx1 '
   },
   {
     image: '/Imagen3.webp',
-    title: ' ',
-    subtitle: ' '
+    title: 'Seguridad para ti y los tuyos ',
+    subtitle: 'xxxxx2 '
   }
 ];
   
@@ -138,7 +138,7 @@ const slides = [
         <img
           src={slide.image}
           alt="Visual Kronos GPS"
-          className="max-h-full max-w-full object-contain drop-shadow-2xl"
+          className="max-h-full max-w-full object-contain"
         />
       </div>
     </div>
