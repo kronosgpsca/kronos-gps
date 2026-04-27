@@ -108,7 +108,7 @@ const slides = [
 
             {/* Botón Plataforma */}
             <a 
-              href="https://www.iopgps.com/" 
+              href="https://www.plataforma.kronosgps.com" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xs md:text-sm hover:bg-slate-800 transition shadow-md"
